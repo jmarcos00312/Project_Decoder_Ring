@@ -1,9 +1,8 @@
 function substitution(input, alphabet, encode = true) {
-    if(!alphabet) return false
     const regAlphabet = 'abcdefghijklmnopqrstuvwxyz';
     sortedAlp = alphabet.split('').sort().join('')
     input = input.toLowerCase()
-    if (alphabet.length !== 26 || regAlphabet!== sortedAlp) return false
+    if (alphabet.length !== 26 || regAlphabet!== sortedAlp || !input) return false
     else{
     let result = ''
     const obj = {}
@@ -33,6 +32,6 @@ function substitution(input, alphabet, encode = true) {
 
 
 
-substitution("You are an excellent spy", )
+substitution("You are an excellent spy", "xoyqmcgrukswaflnthdjpzibev")
 substitution("jrufscpw", "xoyqmcgrukswaflnthdjpzibev", false)
 module.exports = substitution;
