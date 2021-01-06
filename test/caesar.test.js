@@ -38,4 +38,10 @@ describe('caesar', ()=>{
         const expected = 'qefkhcri'
         expect(actual).to.eql(expected)
     })
+    it('should return false if the shift value is equal to 0, less than -25 or greater than 25', () => {
+        expect(caesar('false', -26)).to.be.false;
+        expect(caesar('false', 26)).to.be.false;
+        expect(caesar('false', 0)).to.be.false;
+        expect(caesar('false')).to.be.false;
+    })
 });
