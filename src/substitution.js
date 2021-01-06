@@ -1,4 +1,5 @@
 function substitution(input, alphabet, encode = true) {
+    if(!alphabet) return false
     const regAlphabet = 'abcdefghijklmnopqrstuvwxyz';
     sortedAlp = alphabet.split('').sort().join('')
     input = input.toLowerCase()
@@ -32,6 +33,6 @@ function substitution(input, alphabet, encode = true) {
 
 
 
-substitution("You are an excellent spy", "xoyqmcgrukswaflnthdjpzibev")
+substitution("You are an excellent spy", )
 substitution("jrufscpw", "xoyqmcgrukswaflnthdjpzibev", false)
 module.exports = substitution;
